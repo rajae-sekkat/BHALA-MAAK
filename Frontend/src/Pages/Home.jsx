@@ -2,16 +2,16 @@
 import React from 'react';
 import "./Home.css";
 import DataBox from '../Components/DataBox';
-import NavBare from '../Components/NavBare';
 import heart from '../images/heart.png';
 import location from '../images/location.png';
 import calendar from "../images/calendar.png";
 import other from "../images/diabetes.png";
+import NavBar from '../Components/NavBar';
 
 function Home  ()  {
   return (
     <div className='home'>
-        <NavBare></NavBare>
+      <NavBar></NavBar>
     <div>
       <div className="principale">
         <DataBox ClassName="heart-box"

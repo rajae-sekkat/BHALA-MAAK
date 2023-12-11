@@ -2,14 +2,14 @@ import React from "react";
 
 import "./HeartPage.css";
 import DataBox from "../Components/DataBox";
-import NavBare from "../Components/NavBare";
 import heart from "../images/heart.png";
 import other from "../images/diabetes.png";
+import NavBar from "../Components/NavBar";
 
 function HeartPage() {
   return (
     <div className="home">
-      <NavBare></NavBare>
+      <NavBar></NavBar>
       <div>
         <div className="principale">
           <DataBox

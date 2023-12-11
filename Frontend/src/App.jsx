@@ -4,7 +4,6 @@ import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
 import Home from './Pages/Home';
 import HeartPage from './Pages/HeartPage';
-import HeartRateHistoryPage from './Pages/HeartRateHistoryPage';
 
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         <Route path="/Signup" element={ <SignupPage/> } />
         <Route path="/home" element={ <Home/> } />
         <Route path="/heartPage" element={ <HeartPage/>  } />
-        <Route path="/heartHistoryPage" element={ <HeartRateHistoryPage/>  } />
         
       </Routes>
     </Router>
