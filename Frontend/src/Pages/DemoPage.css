@@ -1,0 +1,59 @@
+.App {
+    display: flex;
+    justify-content: space-between; /* Add this to space the two divs */
+  }
+  
+  .div1 {
+    background-color: #f0f0f0; /* Add your preferred background color */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .div2 {
+    background-color: #ffffff; /* Add your preferred background color */
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* Allow div2 to take remaining space */
+  }
+  
+  form {
+    max-width: 400px; /* Adjust the max width of the form */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  /* Style the header */
+  header {
+    margin-bottom: 20px;
+  }
+  
+  /* Style the paragraph in div1 */
+  .div1 p {
+    font-style: italic;
+    color: #333;
+  }
+  
+  /* Style the sign-up header in div2 */
+  .div2 h3 {
+    color: #333;
+  }
+  
+  /* Style the form inputs */
+  form input,
+  form select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Style the submit button */
+  form button {
+    background-color: #007bff; /* Add your preferred button color */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Add any additional styling you need */
+  
