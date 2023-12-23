@@ -26,7 +26,7 @@ function AboutPage() {
           ensuring your loved one's safety and health
         </p>
       </div>
-        <div className="features">
+        <div className="features1">
           <div>
             <FaMapMarker className="icon" />
             <p className="text">Real-time location</p>

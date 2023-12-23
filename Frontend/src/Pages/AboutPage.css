@@ -26,7 +26,7 @@ body {
   align-items: center;
   justify-content: center;
   left: 50%;
-  margin-top: 70px;
+  margin-top: 60px;
   margin-bottom: 30px;
   position: absolute;
   color: #fff;
@@ -34,24 +34,24 @@ body {
   background-color: #f68b08;
 }
 
-.features {
+.features1 {
   height: 446px;
   position: relative;
   width: 1343px;
-  margin-top: 120px;
+  margin-top: 130px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 0;
+  padding: 30px ;
   background-color: #f3cbac;
 }
-.features div {
+.features1 div {
   width: 300px;
   margin-bottom: 20px;
 }
 
-.features .icon {
+.features1 .icon {
   width: 50px;
   height: 50px;
   color: #000;
@@ -59,14 +59,14 @@ body {
   border-radius: 50%;
 }
 
-.features .text {
+.features1 .text {
   line-height: 20px;
   color: #000;
   font-family: "Lato-ExtraBold", Helvetica;
   font-size: 32px;
 }
 
-.features p {
+.features1 p {
   font-size: 14px;
   line-height: 18px;
   margin-top: 10px;

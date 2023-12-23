@@ -1,17 +1,35 @@
-.LoginFrame {
-  width: 500px;
-  height: 400px;
-  margin-left: 460px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 11px rgba(0, 0, 0, 0.5);
-  background-color: rgb(235, 230, 223);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.LoginFrame h2 {
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-position: center;
+}
+.tit{
+  color: #fcab38;
+  margin-bottom: 40px;
+}
+.LoginFrame {
+  margin-top: 40px;
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+
+.LoginFrame h1 {
+  font-size: 36px;
   text-align: center;
-  color: #000;
 }
 
 form {
@@ -21,25 +39,36 @@ form {
 
 label {
   margin-bottom: 10px;
-  color: #000;
+  color: #fff;
 }
-
+label input::placeholder {
+  color: #fff;
+}
 input {
-  padding: 8px;
-  margin-bottom: 15px;
-  width: 99%;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
 }
 
 .LoginButton {
-    background-color: #f68b08; /* Fixed button color */
-    color: #fff;
-    padding: 8px; /* Smaller button size */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  width: 100%;
+  height: 45px;
+  background: #fcab38;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
   }
 
 .toSignUp{
@@ -47,7 +76,6 @@ input {
   padding: 10px 20px;
   align-content: center;
   font-size: 16px;
-  color: black;
   cursor: pointer;
   margin-bottom: 20px;
   align-items: center;
@@ -55,4 +83,13 @@ input {
   left: 50%;
   margin-right: 10px;
   text-align: center;
+  color: #fff;
+}
+.toSignUp a {
+  color: #fcab38;
+  text-decoration: none;
+  font-weight: 600;
+}
+.link a:hover {
+  text-decoration: underline;
 }

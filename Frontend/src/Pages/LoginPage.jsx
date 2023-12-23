@@ -31,21 +31,21 @@ function LoginPage() {
     <div>
       <NavBare></NavBare>
       <div className="LoginFrame">
-        <h2>Page de Connexion</h2>
+      <h1 class="tit">Login</h1>
         <form>
           <label>
-            Nom d'utilisateur:
             <input
               type="text"
+              placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </label>
           <br />
           <label>
-            Mot de passe:
             <input
               type="password"
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -59,9 +59,12 @@ function LoginPage() {
           >
             Login
           </button>
-          <a href="/Demo" className="toSignUp">
-            How it work? Get a Demo.
+          <h4 className="toSignUp">
+           How it work?
+          <a href="/Demo" >
+             Get a Demo.
           </a>
+          </h4>
         </form>
       </div>
     </div>

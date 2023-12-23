@@ -5,8 +5,8 @@ import NavBare from "../Components/NavBare";
 function DemoPage() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [jobTitle, setJobTitle] = useState("");
-  const [company, setCompany] = useState("");
+  const [Location, setLocation] = useState("");
+  const [message, setmessage] = useState("");
   const [careType, setCareType] = useState("Senior Group Living");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -21,14 +21,23 @@ function DemoPage() {
       <NavBare></NavBare>
       <div className="div1">
       <header>
-        <h1>CarePredict</h1>
+        <h1>Bhala Maak</h1>
         <h2>The Single Pane of Glass to Manage Your Community</h2>
       </header>
-      <p>Empowering Better Senior Living</p>
+      <p>BhalaMaak is a leading digital health company purpose-built
+        to meet the demands of senior living. Peer-reviewed and published
+        studies show that BhalaMaak reduces hospitalizations in senior
+        living communities by 39%, falls by 69%, improves staff response
+        times by 37%, and increases the length of stay by 67%.
+        BhalaMaak consists of an award-winning smart wearable- Tempo™,
+        artificial intelligence, machine learning, and advanced kinematics
+        algorithms to learn each resident’s daily activity and behavior patterns. 
+        When there is a deviation from a resident’s “normal,” the system alerts staff 
+        on a wide range of potential health concerns.</p>
       </div>
-
       <div className="div2">
-        <h3>Sign up to learn more</h3>
+        
+        <div className="submit_dev">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -42,28 +51,14 @@ function DemoPage() {
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
-          <input
-            type="text"
-            placeholder="Job Title"
-            value={jobTitle}
-            onChange={(e) => setJobTitle(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Company/Senior Living Community"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
-          />
           <select
             name="care_type"
             value={careType}
             onChange={(e) => setCareType(e.target.value)}
           >
-            <option value="Senior Group Living">Senior Group Living</option>
-            <option value="Assisted Living">Assisted Living</option>
-            <option value="Memory Care">Memory Care</option>
-            <option value="CCRC">CCRC</option>
-            <option value="Independent Living">Independent Living</option>
+            <option value="Senior Group Living">Monitor, Supervisor </option>
+            <option value="Assisted Living">Monitored</option>
+            
           </select>
           <input
             type="email"
@@ -77,8 +72,22 @@ function DemoPage() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
-          <button type="submit">Sign Up</button>
+                    <input
+            type="text"
+            placeholder="Where are you located?"
+            value={Location}
+            onChange={(e) => setLocation(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Why are you interested in BHALAMAAK?"
+            value={message}
+            onChange={(e) => setmessage(e.target.value)}
+          />
+          <button type="submit">Submit</button>
         </form>
+        </div>
+        
       </div>
     </div>
   );

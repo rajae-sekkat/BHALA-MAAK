@@ -1,0 +1,54 @@
+.container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .heading {
+    font-size: 50px;
+    margin-bottom: 100px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .buttonContainer {
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    background: #fcab38;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .temperatureBox {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .temperature {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .message {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .infoBox {
+    margin-top: 10px;
+  }
+  
+  .info {
+    font-size: 16px;
+    color: #555;
+  }
+  
