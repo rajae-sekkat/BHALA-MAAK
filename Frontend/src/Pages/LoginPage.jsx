@@ -10,13 +10,12 @@ function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
+  const handleLogin = (event) => {
     event.preventDefault();
-    axios
-      .post("http://localhost:8081/login", { username, password }) // Modification de cette ligne
+    axios.post("http://localhost:8081/api/login", { username, password }) // Modification de cette ligne
       .then((res) => {
         if (res.data === "success") {
-          navigate("/home");
+          navigate("/VitalParameterPage");
         } else {
           alert("No record exists");
         }
@@ -26,13 +25,13 @@ function LoginPage() {
         alert("An error occurred during login");
       });
   };
-
+  
   return (
     <div>
       <NavBare></NavBare>
-      <div className="LoginFrame">
-      <h1 class="tit">Login</h1>
-        <form>
+      <div className="Login-Frame" >
+      <h1 className="tit">Login</h1>
+        <form method="post" onSubmit={handleLogin}> 
           <label>
             <input
               type="text"
@@ -56,6 +55,7 @@ function LoginPage() {
             type="button"
             onClick={handleLogin}
             color="#f68b08"
+
           >
             Login
           </button>

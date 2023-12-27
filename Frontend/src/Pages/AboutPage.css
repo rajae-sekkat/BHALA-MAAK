@@ -1,73 +1,93 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  background-image: url("C:/Users/Rajae Sekkat/Desktop/projet_PPP/Frontend/src/images/headerBg.jpeg");
-  width: 100%;
+.home2 {
+  width:1342px;
   position: relative;
   font-family: "poppins", sans-serif;
   background-color: rgb(246, 243, 240);
 }
 
-::selection {
-  background: #1b1b1b;
-  color: #fff;
+
+
+.div {
+  background-image: url("../images/first.jfif");
+  background-size: cover, contain;
+  background-position: center;
+  margin-bottom: -100px;
+  min-height: max-content;
 }
 
 .content1 {
   text-align: center;
   width: 100%;
-  height: 180px;
-  padding: 30px;
-  transform: translate(-50%, -50%);
-  align-items: center;
-  justify-content: center;
-  left: 50%;
-  margin-top: 60px;
-  margin-bottom: 30px;
-  position: absolute;
+  padding: 20px;
   color: #fff;
   font-size: 16px;
   background-color: #f68b08;
 }
 
+.all {
+  background-color: #f3cbac;
+  padding: 30px;
+  text-align: center;
+}
+
+.all h1 {
+  padding: 20px;
+  color: #f68b08;
+  font-family: "Lato-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+}
+
 .features1 {
-  height: 446px;
-  position: relative;
-  width: 1343px;
-  margin-top: 130px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 30px ;
-  background-color: #f3cbac;
+  padding: 20px;
 }
+
 .features1 div {
   width: 300px;
   margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.features1 div:hover {
+  transform: scale(1.05);
 }
 
 .features1 .icon {
   width: 50px;
   height: 50px;
-  color: #000;
-  background-color: f3cbac;
+  color: #f68b08;
+  background-color: #fff;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .features1 .text {
-  line-height: 20px;
+  line-height: 30px;
   color: #000;
   font-family: "Lato-ExtraBold", Helvetica;
-  font-size: 32px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold; 
+  font-style: italic; /* Ajout de cette ligne */
 }
+
 
 .features1 p {
   font-size: 14px;
   line-height: 18px;
   margin-top: 10px;
+  color: #555;
 }

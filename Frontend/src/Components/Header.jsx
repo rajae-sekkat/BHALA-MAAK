@@ -1,7 +1,16 @@
 import React from "react";
 import "./HeaderStyles.css"
+import { useNavigate } from "react-router-dom";
 
 function Header(){
+
+  const navigate = useNavigate();
+
+  const login=()=>{
+    event.preventDefault();
+    navigate("/login");
+
+  };
 
     return (
         <header className="header">
@@ -13,9 +22,6 @@ function Header(){
               Where care meets convenience, and you're always by their side
             </span>
           </h3>
-          <a href="/Login" className="btnLog">
-            Login To Start
-          </a>
         </div>
       </header>
     )

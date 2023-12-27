@@ -6,11 +6,9 @@ import { FaMapMarker, FaHeartbeat, FaBell } from "react-icons/fa";
 
 function AboutPage() {
   return (
-    <div className="home">
-      <div>
+    <div className="home2">
         <NavBare></NavBare>
-      </div>
-      <div>
+      <div className="div">
         <Header></Header>
       </div>
 
@@ -26,7 +24,10 @@ function AboutPage() {
           ensuring your loved one's safety and health
         </p>
       </div>
+
+        <div className="all">
         <div className="features1">
+          
           <div>
             <FaMapMarker className="icon" />
             <p className="text">Real-time location</p>
@@ -53,6 +54,9 @@ function AboutPage() {
             </p>
           </div>
         </div>
+
+        </div>
+        
       
     </div>
   );

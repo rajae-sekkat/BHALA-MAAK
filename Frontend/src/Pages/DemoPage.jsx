@@ -72,7 +72,7 @@ function DemoPage() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
-                    <input
+          <input
             type="text"
             placeholder="Where are you located?"
             value={Location}

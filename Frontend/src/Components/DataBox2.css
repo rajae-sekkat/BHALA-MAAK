@@ -1,0 +1,37 @@
+.data-box {
+  position: relative;
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 500px;
+  height: 250px;
+  margin-bottom: 25px;
+  margin-left: 40px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+}
+
+.inner-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(235, 230, 223, 0.8); /* Use rgba for transparency */
+  width: 350px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(222, 219, 219, 0.1); /* Inner box shadow */
+}
+
+.inner-box h2 {
+  margin-top: 6px;
+  margin-bottom: 40px;
+}

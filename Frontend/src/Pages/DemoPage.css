@@ -1,20 +1,19 @@
 .App {
   display: flex;
   justify-content: space-between; /* Add this to space the two divs */
+  background-color: #fff;
   
 }
 
 .div1 {
   width: 757px;
   height: 652px;
-  background-color: #fff; /* Add your preferred background color */
   padding: 120px;
 }
 
 .div2 {
   width: 600px;
   height: 652px;
-  background-color: #ffffff; /* Add your preferred background color */
   padding: 110px;
   text-align: center;
   flex: 1; /* Allow div2 to take remaining space */
@@ -49,6 +48,10 @@ form select {
   margin-bottom: 15px;
   padding: 10px;
   box-sizing: border-box;
+  color: #000;
+  border-color: #000;
+  box-sizing: 0.5;
+  border-radius: 10px;
 }
 
 /* Style the submit button */

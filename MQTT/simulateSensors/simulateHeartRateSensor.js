@@ -11,4 +11,4 @@ client.on('connect', () => {
 setInterval(() => {
   const heartRate = Math.random() * 40 + 60; // Simulez une fréquence cardiaque entre 60 et 100
   client.publish('heart-rate/sensor', heartRate.toString());
-}, 1000); // Publier une nouvelle valeur toutes les 5 secondes
+},  1000); // Publier une nouvelle valeur toutes les 5 secondes

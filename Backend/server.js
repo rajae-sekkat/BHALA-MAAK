@@ -7,10 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
 app.use('/api', routes);
 
-const PORT = 8082;
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(8081, () => {
+  console.log(`Server is running on port 8081`);
 });
