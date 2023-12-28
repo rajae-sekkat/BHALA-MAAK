@@ -1,0 +1,22 @@
+.home{
+  width: 1343px;
+  height: 100%;
+}
+
+.location-box {
+  position: relative;
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(9, 1, 1);
+  font-weight: bold;
+  width: 500px;
+  height: 250px;
+  margin-bottom: 25px;
+  margin-left: 40px;
+  background-color: #70c1b3;
+}

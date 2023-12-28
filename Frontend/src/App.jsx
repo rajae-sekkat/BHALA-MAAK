@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import AboutPage from './Pages/AboutPage';
 import LoginPage from './Pages/LoginPage';
-import Home from './Pages/Home';
-
 import DemoPage from './Pages/DemoPage';
 import VitalParameterPage from './Pages/VitalParameterPage';
-import HeartRatePage from './Pages/HeartRatePage';
-import TemperaturePage from './Pages/temperaturePage';
+import LocationPage from './Pages/LocationPage';
+
+
 
 
 function App() {
@@ -20,8 +19,8 @@ function App() {
         <Route path="/login" element={ <LoginPage/> } />
         <Route path="/Demo" element={ <DemoPage/> } />
         <Route path="/VitalParameterPage" element={ <VitalParameterPage/>  } />
-        <Route path="/HeartRatePage" element={ <HeartRatePage/> } />
-        <Route path="/TemperaturePage" element={ <TemperaturePage/> } />
+        <Route path='/LocationPage' element={<LocationPage/>}/>
+        
         
       </Routes>
     </Router>
