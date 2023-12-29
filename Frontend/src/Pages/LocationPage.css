@@ -1,4 +1,13 @@
+.location-page {
+  position: relative;
+}
+.navbar {
+  z-index: 10; /* Set a higher z-index for NavBar */
+}
 
+.leaflet-container-wrapper {
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
 
 .leaflet-container {
   height: 90vh;
