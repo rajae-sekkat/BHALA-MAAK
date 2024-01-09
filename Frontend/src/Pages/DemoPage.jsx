@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./DemoPage.css";
 import NavBare from "../Components/NavBare";
+import axios from "axios";
 
 function DemoPage() {
   const [firstName, setFirstName] = useState("");
@@ -13,7 +14,18 @@ function DemoPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
+    axios.post("http://localhost:8081/api/signup", { firstName,lastName, careType, email, phone, Location,message   }) 
+      .then((res) => {
+        if (res.data === "success") {
+          alert("you have added successfully");
+        } else {
+          alert("No record exists");
+        }
+      })
+      .catch((error) => {
+        console.error("Error during login:", error);
+        alert("An error occurred during login");
+      });
   };
 
   return (

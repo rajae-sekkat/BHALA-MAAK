@@ -1,4 +1,4 @@
-// loroutes.js
+// loginroutes.js
 const express = require("express");
 const UserController = require('../controllers/userController.js');
 
