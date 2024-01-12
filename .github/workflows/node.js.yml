@@ -1,0 +1,58 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Backend
+      uses: actions/checkout@v3
+      with:
+        path: Backend
+
+    - name: Setup Node.js for Backend
+      uses: actions/setup-node@v3
+      with:
+        node-version: v16.13.0
+        cache: 'npm'
+        path: Backend
+
+    - name: Install Backend Dependencies
+      run: npm ci
+      working-directory: Backend
+
+    - name: Run Backend Tests
+      run: npm test
+      working-directory: Backend
+
+  frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Frontend
+      uses: actions/checkout@v3
+      with:
+        path: Frontend
+
+    - name: Setup Node.js for Frontend
+      uses: actions/setup-node@v3
+      with:
+        node-version: v16.13.0
+        cache: 'npm'
+        path: Frontend
+
+    - name: Install Frontend Dependencies
+      run: npm ci
+      working-directory: Frontend
+
+    - name: Run Frontend Tests
+      run: npm test
+      working-directory: Frontend
