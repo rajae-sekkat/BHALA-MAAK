@@ -27,7 +27,7 @@ function LoginPage() {
   };
   
   return (
-    <div>
+    <div className="general">
       <NavBare></NavBare>
       <div className="Login-Frame" >
       <h1 className="tit">Login</h1>

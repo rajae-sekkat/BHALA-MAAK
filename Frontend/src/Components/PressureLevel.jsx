@@ -1,5 +1,6 @@
 import React from "react";
-import  { useState } from 'react';
+import  { useState , useEffect} from 'react';
+import axios from "axios";
 
 function  PressureLevel(){
 
@@ -7,6 +8,9 @@ function  PressureLevel(){
    const [showPopup1, setShowPopup1] = useState(false);
    const [newPressureLevel, setNewPressureLevel] = useState('');
    const [currentPressureLevel, setCurrentPressureLevel] = useState('120/80 Hmmg');
+   const [username] = useState("r_sekkat");
+   const pressureLevelValue = parseFloat(newPressureLevel);
+
    const openPopup1 = () => {
      setShowPopup1(true);
    };
@@ -15,10 +19,41 @@ function  PressureLevel(){
      setShowPopup1(false);
    };
  
-   const updatePressureLevel = () => {
-     setCurrentPressureLevel(`Pressure Level: ${newPressureLevel} mg/dL`);
-     closePopup1();
-   };
+  
+   const updatePressureLevel = (event) => {
+    event.preventDefault();
+    const currentDate = new Date(); // Move inside the function to capture the current date and time when updating
+    setCurrentPressureLevel(`Pressure Level: ${newPressureLevel} /80 Hmmg`);
+  
+    axios.post("http://localhost:8081/api/add-pressure-level", { username, date: currentDate, pressureLevelValue })
+      .then(() => {
+        // After successfully updating, fetch the latest value
+        fetchLatestPressureLevel();
+      })
+      .catch((error) => {
+        console.error("Error during pressure level addition:", error);
+        alert("Error during pressure level addition");
+      });
+  
+    closePopup1();
+  };
+
+  useEffect(() => {
+    // Fetch the latest sugar level value when the component mounts
+    fetchLatestPressureLevel();
+  }, []); // Empty dependency array ensures it only runs once when the component mounts
+
+  const fetchLatestPressureLevel = () => {
+    axios.get("http://localhost:8081/api/latest-pressure-level", { params: { username } })
+      .then((response) => {
+        const latestPressureLevel = response.data.level; // Adjust the property name based on your API response
+        setCurrentPressureLevel(`Pressure Level: ${latestPressureLevel} mg/dL`);
+      })
+      .catch((error) => {
+        console.error("Error fetching latest pressure level:", error);
+        setCurrentPressureLevel('Error fetching latest pressure level');
+      });
+  };
 
 
 
